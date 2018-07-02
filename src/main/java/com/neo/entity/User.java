@@ -7,49 +7,74 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
+
     @Id
     @GeneratedValue
     private long id;
-    @Column(nullable = false, unique = true)
+
+    @Column
     private String userName;
-    @Column(nullable = false)
+
+
+    @Column
     private String password;
-    @Column(nullable = false)
-    private int age;
+
+    @Column
+    private String token;
+
+
+    @Column
+    private  String ifDel;
+
+    @Column
+    private String userType;
+
 
     public long getId() {
         return id;
     }
 
-    public User setId(long id) {
+    public void setId(long id) {
         this.id = id;
-        return this;
     }
 
     public String getUserName() {
         return userName;
     }
 
-    public User setUserName(String userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
-        return this;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public User setPassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
-        return this;
     }
 
-    public int getAge() {
-        return age;
+    public String getToken() {
+        return token;
     }
 
-    public User setAge(int age) {
-        this.age = age;
-        return this;
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getIfDel() {
+        return ifDel;
+    }
+
+    public void setIfDel(String ifDel) {
+        this.ifDel = ifDel;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }

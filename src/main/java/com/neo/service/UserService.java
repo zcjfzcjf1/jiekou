@@ -1,5 +1,6 @@
 package com.neo.service;
 
+import com.neo.entity.RestSResponse;
 import com.neo.entity.User;
 
 import java.util.List;
@@ -17,4 +18,9 @@ public interface UserService {
     public void delete(long id);
 
 
+    //void findUserByUserNameAndPassword(User user);
+
+    void findUserByUserNameAndPassword(String userName, String password,RestSResponse rs);
+
+    void test();
 }
